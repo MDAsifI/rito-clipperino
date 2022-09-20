@@ -1,0 +1,58 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.mobile-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f4f5f0;
+
+  @include tablet {
+    display: none;
+  }
+
+  &__image {
+    max-width: 12rem;
+    object-fit: contain;
+  }
+
+}
+
+.tablet-plus-header {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f4f5f0;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @include desktop {
+      justify-content: space-around;
+    }
+
+  }
+
+  &__logo {
+    object-fit: contain;
+    max-width: 13rem;
+  }
+
+  &__containerR {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__profile {
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 5px #000000;
+    max-width: 7rem;
+    margin-left: 2rem;
+  }
+  
+}
+
