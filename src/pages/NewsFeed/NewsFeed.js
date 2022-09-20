@@ -1,9 +1,11 @@
 import React from "react";
-import "./AccountPage.scss";
+import "./NewsFeed.scss";
 
 const NewsFeed = () => {
     return(
-      console.log('hello')
+      <div className="newsfeed">
+        <video className="newsfeed__video"></video>
+      </div>
     )
 }
 
