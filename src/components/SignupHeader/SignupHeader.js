@@ -1,12 +1,12 @@
 import React from "react";
-import "./Header.scss";
+import "./SignupHeader.scss";
 import logo from '../../assets/images/logo.jpg'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import ProfilePic from '../../assets/images/feelswowman.png';
 import app from "../../firebase"
 import { Navigate, Link } from "react-router-dom"
 
-const Header = () => {
+const SignupHeader = () => {
     return(
       <section className="header">
       <div className="mobile-header">
@@ -20,9 +20,7 @@ const Header = () => {
           <AddBoxOutlinedIcon className="tablet-plus-header__upload" sx={{ fontSize: 60}} />
           <img className="tablet-plus-header__profile" src={ProfilePic} alt="profilepic"></img>
           <a href="/login">
-          <button onClick={()=> {
-            app.auth().signOut();
-             }}>Sign Out</button></a>
+          <button>Login</button></a>
         </div>
       </div>  
       </section>
@@ -30,4 +28,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default SignupHeader

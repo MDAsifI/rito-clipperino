@@ -4,19 +4,28 @@ import Footer from './components/Footer/Footer';
 import NewsFeed from './pages/NewsFeed/NewsFeed';
 import AccountPage from './pages/AccountPage/AccountPage';
 import {BrowserRouter, Route , Routes,} from 'react-router-dom';
+import Signup from './components/Signup/Signup'
+import LoginPage from './pages/LoginPage/LoginPage'
+import { AuthProvider } from './contexts/AuthContext';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
+  
   return (
     <div className="App">
-      <Header/>
+      <AuthProvider>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<NewsFeed />} />
+        <Route path="/" element={<Signup/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/home" element={<NewsFeed />} />
         <Route path="/account" element={<AccountPage/>}/>
         {/* <Route path="/upload" element={<Upload />} /> */}
+
       </Routes>
       </BrowserRouter>
       <Footer/>
+      </AuthProvider>
     </div>
   );
 }
