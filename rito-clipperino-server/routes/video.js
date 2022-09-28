@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const app = express();
-const cors = require('cors')
-
-app.use(cors());
 
 
-var storage = multer.diskStorage({
+const { Video } = require("../models/Video");
+
+
+let storage = multer.diskStorage({
     destination:  (req, file, cb) => {
         cb(null, 'uploads')
     },
@@ -23,7 +22,7 @@ var storage = multer.diskStorage({
     }
 })
 
-var upload = multer({ storage: storage }).single("file")
+let upload = multer({ storage: storage }).single("file")
 
 
 router.post("/uploadfiles", (req, res) => {
@@ -37,6 +36,18 @@ router.post("/uploadfiles", (req, res) => {
 
 });
 
+router.post("/uploadVideo", (req, res) => {
+
+    const video = new Video(req.body)
+
+    video.save((err, video) => {
+        if(err) return res.status(400).json({ success: false, err })
+        return res.status(200).json({
+            success: true 
+        })
+    })
+
+});
 
 
 module.exports = router;

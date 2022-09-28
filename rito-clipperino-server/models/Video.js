@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const videoSchema = mongoose.Schema({
+    author: {
+        type:String,
+    },
     title: {
         type:String,
         maxlength:50,
