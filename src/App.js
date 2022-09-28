@@ -8,6 +8,7 @@ import Signup from './components/Signup/Signup'
 import LoginPage from './pages/LoginPage/LoginPage'
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from './PrivateRoute';
+import Upload from './components/Upload/Upload';
 
 function App() {
   
@@ -20,7 +21,7 @@ function App() {
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/home" element={<NewsFeed />} />
         <Route path="/account" element={<AccountPage/>}/>
-        {/* <Route path="/upload" element={<Upload />} /> */}
+        <Route path="/upload" element={<Upload />} />
 
       </Routes>
       </BrowserRouter>

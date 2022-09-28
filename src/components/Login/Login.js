@@ -2,6 +2,7 @@ import React, { useCallback, useContext } from "react";
 import { Navigate } from "react-router";
 import app from "../../firebase";
 import { AuthContext } from "../../contexts/AuthContext";
+import "./Login.scss"
 
 const Login = ({ 
  }) => {
@@ -31,9 +32,9 @@ const Login = ({
   }
 
   return (
-    <div>
+    <div className="login">
       <h1>Log in</h1>
-      <form onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={handleLogin}>
         <label>
           Email
           <input name="email" type="email" placeholder="Email" />
@@ -42,7 +43,7 @@ const Login = ({
           Password
           <input name="password" type="password" placeholder="Password" />
         </label>
-        <button type="submit">Log in</button>
+        <button className ="login-button" type="submit">Log in</button>
       </form>
     </div>
   );

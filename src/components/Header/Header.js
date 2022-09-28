@@ -10,17 +10,23 @@ const Header = () => {
     return(
       <section className="header">
       <div className="mobile-header">
+        <a href="/home">
         <img className="mobile-header__image" src={logo} alt="logo"></img>
+        </a>
       </div>
       <div className="tablet-plus-header">
         <div className="tablet-plus-header__containerL">
+        <a href="/home">
           <img className="tablet-plus-header__logo" src={logo} alt="logo"></img>
+        </a>
         </div>
         <div className="tablet-plus-header__containerR">
-          <AddBoxOutlinedIcon className="tablet-plus-header__upload" sx={{ fontSize: 60}} />
+          <a href="/upload">
+            <AddBoxOutlinedIcon className="tablet-plus-header__upload" sx={{ fontSize: 60}} />
+          </a>
           <img className="tablet-plus-header__profile" src={ProfilePic} alt="profilepic"></img>
           <a href="/login">
-          <button onClick={()=> {
+          <button className="signout-button" onClick={()=> {
             app.auth().signOut();
              }}>Sign Out</button></a>
         </div>

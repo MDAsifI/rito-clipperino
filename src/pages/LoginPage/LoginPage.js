@@ -5,7 +5,7 @@ import "./LoginPage.scss";
 
 const NewsFeed = () => {
     return(
-      <div className="login">
+      <div className="loginPage">
         <LoginHeader/>
         <Login/>
       </div>
