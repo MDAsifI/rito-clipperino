@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Button, Form, message, Input, Icon } from "antd";
+import { Typography, Button, Form, Input} from "antd";
 import Dropzone from "react-dropzone";
 import axios from "axios";
 import Header from "../Header/Header";
@@ -29,7 +29,7 @@ function Upload() {
     }
 
     const info = {
-      author: "Username",
+      author: "User",
       title: title,
       description: Description,
       filePath: FilePath,
@@ -97,16 +97,9 @@ function Upload() {
                     {...getRootProps()}
                   >
                     <input {...getInputProps()} />
-                    {/* <Icon type="plus" style={{ fontSize: '3rem' }} /> */}
                   </div>
                 )}
               </Dropzone>
-
-              {/* {thumbnail !== "" &&
-                    <div>
-                        <img src={`http://localhost:5000/${thumbnail}`} alt="haha" />
-                    </div>
-                } */}
             </div>
 
             <br />

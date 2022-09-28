@@ -17,9 +17,9 @@ const Footer = () => {
         setValue(newValue);
       }}
     >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+      <BottomNavigationAction href="/home" label="Home" icon={<HomeIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Upload" icon={<Upload />} />
+      <BottomNavigationAction href="/upload" label="Upload" icon={<Upload />} />
     </BottomNavigation>
     </div>
   );
