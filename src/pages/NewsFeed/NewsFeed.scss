@@ -11,4 +11,10 @@
     border: solid black 3px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
+  &-top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2%;
+    padding-top: 2%;
+  }
 }
