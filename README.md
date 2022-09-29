@@ -1,3 +1,6 @@
+This project is for uploading clips from videogames to show off to your friends. I wanted to build a central hub to store these videos and to upload them using a social media platform. In a sense, it's a small version of youtube and instagram video combined for gaming highlights. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
