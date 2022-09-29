@@ -7,18 +7,18 @@ const { Video } = require("../models/Video");
 
 
 let storage = multer.diskStorage({
-    destination:  (req, file, cb) => {
-        cb(null, 'uploads')
+    destination:  (req, file, callback) => {
+        callback(null, 'uploads')
     },
-    filename:  (req, file, cb) => {
-        cb(null, `${Date.now()}_${file.originalname}`)
+    filename:  (req, file, callback) => {
+        callback(null, `${Date.now()}_${file.originalname}`)
     },
-    fileFilter: (req, file, cb) => {
+    fileFilter: (req, file, callback) => {
         const ext = path.extname(file.originalname)
         if (ext !== '.mp4') {
-            return cb(res.status(400).end('only mp4 is allowed'), false);
+            return callback(res.status(400).end('only mp4 is allowed'), false);
         }
-        cb(null, true)
+        callback(null, true)
     }
 })
 
