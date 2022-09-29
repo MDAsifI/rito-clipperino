@@ -1,0 +1,16 @@
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.bio{
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5% 15%;
+  justify-content: space-between;
+  border: 2px solid black;
+
+  &-desc{
+    font-size: 2rem;
+  }
+}

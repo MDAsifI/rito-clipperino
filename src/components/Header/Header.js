@@ -4,7 +4,6 @@ import logo from '../../assets/images/logo.jpg'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import ProfilePic from '../../assets/images/feelswowman.png';
 import app from "../../firebase"
-import { Navigate, Link } from "react-router-dom"
 
 const Header = () => {
     return(
@@ -24,7 +23,9 @@ const Header = () => {
           <a href="/upload">
             <AddBoxOutlinedIcon className="tablet-plus-header__upload" sx={{ fontSize: 60}} />
           </a>
+          <a href="/account">
           <img className="tablet-plus-header__profile" src={ProfilePic} alt="profilepic"></img>
+          </a>
           <a href="/login">
           <button className="signout-button" onClick={()=> {
             app.auth().signOut();

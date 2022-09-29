@@ -18,8 +18,6 @@ function Upload() {
   };
 
   const handleChangeDescription = (event) => {
-    console.log(event.currentTarget.value);
-
     setDescription(event.currentTarget.value);
   };
 

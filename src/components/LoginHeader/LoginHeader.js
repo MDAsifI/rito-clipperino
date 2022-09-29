@@ -3,8 +3,6 @@ import "./LoginHeader.scss";
 import logo from '../../assets/images/logo.jpg'
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import ProfilePic from '../../assets/images/feelswowman.png';
-import app from "../../firebase"
-import { Navigate, Link } from "react-router-dom"
 import "./LoginHeader.scss"
 
 const LoginHeader = () => {
@@ -25,7 +23,9 @@ const LoginHeader = () => {
           <a href="/upload">
           <AddBoxOutlinedIcon className="tablet-plus-header__upload" sx={{ fontSize: 60}} />
           </a>
+          <a href="/account">
           <img className="tablet-plus-header__profile" src={ProfilePic} alt="profilepic"></img>
+          </a>
           <a href="/">
           <button className="signup-button">Sign Up</button></a>
         </div>
